@@ -1,0 +1,64 @@
+
+body{
+    background-image: url(https://img.freepik.com/fotos-premium/fondo-abstracto-pincel-pintura-aceite-colorido-rojo-oscuro_679964-2942.jpg);
+    /* text-align: center; */
+    background-size: 1420px;
+}
+
+/* --------------------------------------------------------------------- */
+
+#h1{
+    color: white;
+    text-align: center;
+}
+
+.casillas{
+    display: grid;
+    grid-template-columns: repeat(3, 163px);
+    grid-template-rows: repeat(3, 163px);
+    justify-content: center;
+    max-width: 100%;
+    margin: auto;
+    padding: auto;
+}
+
+.fuera{
+    display: grid;
+    justify-content: center;
+}
+
+.cuadros{
+    
+    align-items: center;
+    justify-content: center;
+    border-style: inset;
+    border-color: black;
+    text-align: center;
+    font-size: 150px;
+}
+
+/* -------------------------------------------------------------------- */
+.btnjugar{
+    border-radius: 12px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.btn{
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.btnMenu{
+    border-radius: 12px;
+    text-align: left;
+    font-size: 20px;
+}
+
+
+@media(max-width:768px){
+    .casillas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
