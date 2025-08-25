@@ -1,64 +1,109 @@
 
 body{
     background-image: url(https://img.freepik.com/fotos-premium/fondo-abstracto-pincel-pintura-aceite-colorido-rojo-oscuro_679964-2942.jpg);
-    /* text-align: center; */
-    background-size: 1420px;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-/* --------------------------------------------------------------------- */
-
-#h1{
-    color: white;
-    text-align: center;
-}
+/*............................. Tablero .............................*/
 
 .casillas{
     display: grid;
-    grid-template-columns: repeat(3, 163px);
-    grid-template-rows: repeat(3, 163px);
+    grid-template-columns: repeat(3, 130px);
+    grid-template-rows: repeat(3, 130px);
+    gap: 10px;
     justify-content: center;
-    max-width: 100%;
     margin: auto;
-    padding: auto;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid black;
 }
 
 .fuera{
-    display: grid;
+    display: flex;
     justify-content: center;
+    align-items: flex-start;
+    margin-left: 0;
+    gap: 0;
+    max-width: 100%;
 }
 
 .cuadros{
-    
+    display: flex;
     align-items: center;
     justify-content: center;
     border-style: inset;
     border-color: black;
     text-align: center;
-    font-size: 150px;
+    font-size: 125px;
 }
 
-/* -------------------------------------------------------------------- */
-.btnjugar{
-    border-radius: 12px;
+/*............................. Turnos y estadistica .............................*/
+
+#turnoActual{
     text-align: center;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: bold;
 }
+
+.turno-X{ color: rgb(250, 194, 194);}
+.turno-O{ color: rgb(255, 38, 0);}
+
+#estadisticas{
+        background-color: #000000;
+        padding: 10px;
+        border-radius: 10px;
+        color: #fdfdfd;
+        font-size: 25px;
+        width: 180px;
+}
+
+
+/*............................. Botones .............................*/
 
 .btn{
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    
+    gap: 10px;
 }
 
-.btnMenu{
-    border-radius: 12px;
-    text-align: left;
-    font-size: 20px;
+.btnMenu,
+.btnIa,
+.reiniciartablero,
+.btnjugar,
+#borrarHistorial{
+        border-radius: 12px;
+        text-align: left;
+        font-size: 20px;
+        transition: background-color 0.3s ease;
 }
 
-
-@media(max-width:768px){
-    .casillas {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.btnMenu:hover,
+.btnIa:hover,
+.reiniciartablero:hover,
+.btnjugar:hover{
+        background-color: #000000;
+        color: white;
 }
+
+/*............................. Titulo imagen .............................*/
+
+.ticTacToe {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+}
+
+/*............................. Responsive .............................*/
+
+@media (max-width: 600px) {
+.casillas {
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 8px;
+}
+} 
